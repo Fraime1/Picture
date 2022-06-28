@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Picture</string>
+    <string name="bottom_home_button">Home</string>
+    <string name="bottom_profile_button">Profile</string>
+    <string name="bottom_settings_button">Settings</string>
+    <string name="bottom_messenger_button">Messenger</string>
+    <string name="chat_hint_message">Message</string>
+    <!-- Strings related to login and sign up -->
+    <string name="email_sign_in_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="create_account_hint">Don\'\ t have an account?</string>
+    <string name="title_sing_in">Welcome to the Picture</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="sign_up_account">Sign Up</string>
+    <string name="sign_up_create_account">Create your Account</string>
+    <string name="email_hint">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_failed_hint">Login failed.\nInvalid email or password</string>
+    <string name="username_hint">Username</string>
+    <string name="progressText">Loading…</string>
+    <!--Strings related to Profile -->
+    <string name="sign_out_bt">Sign Out</string>
+    <string name="night_mode_bt">Night mode</string>
+    <string name="change_password_bt">Change password</string>
+    <string name="edit_bt">Edit</string>
+    <string name="accoutn_title">Account</string>
+    <string name="username_hilt_profile">Tap to change Username</string>
+    <string name="email_hint_profile">Tap to change Email</string>
+    <string name="password_hint_profile">Tap to change password</string>
+    <string name="setting_text_profile">Settings</string>
+    <string name="bottom_sheet_hint_profile">You have been logged in too long. You must be logged in recently for this operation. Please enter your current email and password and try again</string>
+    <!--Strings related to PhotoEditDialogFragment -->
+    <string name="change_password">Change password</string>
+    <string name="change_email">Change email</string>
+    <string name="change_photo">Change photo</string>
+    <string name="open_photo">Open photo</string>
+    <string name="delete_photo">Delete photo</string>
+    <string name="upload_photo">Upload from device</string>
+    <string name="take_photo">Take photo</string>
+    <!--Strings related to UsernameChangeFragment-->
+    <string name="username_hint_usernamge_change">You can choose a public username in Picture. \nYou can use the characters a–z, 0–9 and underscores. Minimum length - 6 characters</string>
+    <string name="save_image_usernamefragment">Save</string>
+    <!--Strings related to EmailChangeFragment-->
+    <string name="email_hint_email_change">You can choose a public email in Picture. \nPlease enter the correct email</string>
+    <!--String related to PasswordChangeFragment-->
+    <string name="password_hint_password_change">You can change the password in Picture. \nThe password must be more then 6 characters, contain one digit, contain upper and lower case letter, contain one special symbol</string>
+    <!--Strings for fragments-->
+    <string name="login_fragment">Login</string>
+    <string name="sign_up_fragment">Sign Up</string>
+    <string name="profile_fragment">Profile</string>
+    <string name="username_fragment">Username</string>
+    <string name="email_Fragemnt">Email</string>
+
+</resources>
