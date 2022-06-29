@@ -19,6 +19,8 @@
     <string name="username_hint">Username</string>
     <string name="progressText">Loading…</string>
     <!--Strings related to Profile -->
+    <string name="friends_linear">Friends</string>
+    <string name="friends_linear_hint">Tap to select</string>
     <string name="sign_out_bt">Sign Out</string>
     <string name="night_mode_bt">Night mode</string>
     <string name="change_password_bt">Change password</string>

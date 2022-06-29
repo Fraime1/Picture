@@ -67,6 +67,10 @@
                 android:id="@+id/action_profileFragment_to_passwordChangeFragment"
                 app:destination="@id/passwordChangeFragment"
                 app:popUpTo="@id/profileFragment" />
+            <action
+                android:id="@+id/action_profileFragment_to_firendsFragment"
+                app:destination="@id/firendsFragment"
+                app:popUpTo="@id/profileFragment" />
         </fragment>
         <fragment
             android:id="@+id/settingsFragment"
@@ -112,6 +116,17 @@
             tools:layout="@layout/fragment_password_change">
             <action
                 android:id="@+id/action_passwordChangeFragment_to_profileFragment"
+                app:destination="@id/profileFragment"
+                app:popUpTo="@id/nav_graph_application"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/firendsFragment"
+            android:name="com.fraime.android.picture.presentation.ui.profile.friends.FirendsFragment"
+            android:label="FirendsFragment"
+            tools:layout="@layout/fragmnet_firends">
+            <action
+                android:id="@+id/action_firendsFragment_to_profileFragment"
                 app:destination="@id/profileFragment"
                 app:popUpTo="@id/nav_graph_application"
                 app:popUpToInclusive="true" />

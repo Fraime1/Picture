@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/passwordLinear"
+                    android:id="@+id/firendsLinear"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="32dp"
@@ -37,6 +37,35 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/emailLinear">
+
+                    <TextView
+                        android:id="@+id/friendsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friends_linear"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/friendsTextHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friends_linear_hint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/passwordLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/firendsLinear">
 
                     <TextView
                         android:id="@+id/changePasswordText"
@@ -121,11 +150,11 @@
                     android:id="@+id/profilePhoto"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="24dp"
                     android:clickable="true"
                     app:civ_border_color="@color/purple_200"
                     app:civ_border_width="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:setImageUri="@{viewModel.photo}"
@@ -136,7 +165,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
                     android:text="@string/accoutn_title"
                     android:textColor="#CE35E8"
@@ -199,6 +228,60 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profilePhoto"
                     tools:text="Online" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="409dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/passwordLinear" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="409dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profilePhoto" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/passwordLinear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/emailLinear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/firendsLinear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
