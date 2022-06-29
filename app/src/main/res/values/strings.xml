@@ -51,4 +51,8 @@
     <string name="username_fragment">Username</string>
     <string name="email_Fragemnt">Email</string>
 
+    <!--Strings related to FriendsFragment-->
+    <string name="firends_tab">Friends</string>
+    <string name="firends_requests_tab">Friend requests</string>
+
 </resources>
