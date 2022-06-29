@@ -124,7 +124,7 @@
             android:id="@+id/firendsFragment"
             android:name="com.fraime.android.picture.presentation.ui.profile.friends.FirendsFragment"
             android:label="FirendsFragment"
-            tools:layout="@layout/fragmnet_firends">
+            tools:layout="@layout/fragment_friends">
             <action
                 android:id="@+id/action_firendsFragment_to_profileFragment"
                 app:destination="@id/profileFragment"

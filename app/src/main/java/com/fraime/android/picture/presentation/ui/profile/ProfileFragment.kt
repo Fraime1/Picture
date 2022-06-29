@@ -161,6 +161,9 @@ class ProfileFragment : Fragment() {
         binding.passwordLinear.setOnClickListener {
             viewModel.toChangePassword(findNavController())
         }
+        binding.firendsLinear.setOnClickListener {
+            viewModel.toFriends(findNavController())
+        }
     }
 
     override fun onStart() {

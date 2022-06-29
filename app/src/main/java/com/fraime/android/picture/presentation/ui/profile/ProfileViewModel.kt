@@ -132,6 +132,10 @@ class ProfileViewModel(
         navController.navigate(R.id.action_profileFragment_to_passwordChangeFragment)
     }
 
+    fun toFriends(navController: NavController) {
+        navController.navigate(R.id.action_profileFragment_to_firendsFragment)
+    }
+
     private fun isExternalStorageWritable(): Boolean {
         return Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
     }
