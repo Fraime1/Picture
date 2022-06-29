@@ -19,6 +19,7 @@ class UsernameChangeViewModel(private val changeUsernameUseCase: ChangeUsernameU
 
     private val _errorInputText: MutableLiveData<String> = MutableLiveData()
     val errorInputText : LiveData<String> = _errorInputText
+    val oldUsername: MutableLiveData<String> = MutableLiveData()
     val username : MutableLiveData<String> = MutableLiveData()
 
 
@@ -26,7 +27,7 @@ class UsernameChangeViewModel(private val changeUsernameUseCase: ChangeUsernameU
         if (validUsername()) {
             viewModelScope.launch {
                 Log.d(TAG, "Enter to saveUsername() : ${username.value}")
-                if (changeUsernameUseCase.execute(username.value ?: "")) {
+                if (changeUsernameUseCase.execute(username.value ?: "", oldUsername.value ?: "")) {
                     navController.navigate(R.id.action_usernameChangeFragment_to_profileFragment)
                 }
             }

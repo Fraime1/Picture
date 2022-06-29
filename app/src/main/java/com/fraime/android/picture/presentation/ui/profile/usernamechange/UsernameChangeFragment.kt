@@ -35,6 +35,7 @@ class UsernameChangeFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         viewModel.username.value = arguments?.getString(USERNAME)
+        viewModel.oldUsername.value = arguments?.getString(USERNAME)
         navBot.visibility = View.GONE
         return binding.root
     }

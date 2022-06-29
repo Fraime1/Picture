@@ -11,7 +11,7 @@ interface ProfileRepository {
 
     suspend fun getUser() : User
 
-    suspend fun changeUsername(text: String) : Boolean
+    suspend fun changeUsername(newUsername: String, oldUsername: String) : Boolean
 
     suspend fun changeEmail(email: String) : Boolean
 

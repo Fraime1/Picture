@@ -3,6 +3,7 @@ package com.fraime.android.picture.data.firebase
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.fraime.android.picture.domain.model.AppState
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
 import com.google.firebase.auth.FirebaseUser
@@ -56,12 +57,14 @@ class FirebaseAuthPicture {
                                 }
                         }
                     }
-                    //Create database node with new current user
+                    //Create database node with new current user and node with friends
                     CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
-                        FirebaseRDPicture().setDefaultUserValue(auth.currentUser, username, FirebaseStoragePicture().getDefaultImage())
+                        FirebaseRDPicture().setDefaultUserValue(getCurrentUser(), username, FirebaseStoragePicture().getDefaultImage()).await()
+                        FirebaseRDPicture().setDefaultFriendValue(getCurrentUser(),username).await()
+                        AppState.updateState(AppState.ONLINE).await()
+                        Log.d(TAG, "signUpWithEmail: success")
+                        resultMutableLiveData.postValue((true to ""))
                     }
-                    Log.d(TAG, "signUpWithEmail: success")
-                    resultMutableLiveData.value = (true to "")
                 } else {
                     Log.d(TAG, "signUpWithEmail: failure")
                     resultMutableLiveData.value =
@@ -96,14 +99,14 @@ class FirebaseAuthPicture {
         auth.signOut()
     }
 
-    suspend fun changeUsername(text: String): Boolean {
+    suspend fun changeUsername(newUsername: String, oldUsername: String): Boolean {
         val user = getCurrentUser()
         val userChangeProfile = userProfileChangeRequest {
-            displayName = text
+            displayName = newUsername
         }
         return try {
             user?.updateProfile(userChangeProfile)?.await()
-            FirebaseRDPicture().updateUsername(getCurrentUser(), text)
+            FirebaseRDPicture().updateUsername(getCurrentUser(), newUsername, oldUsername)
             true
         } catch (e: Exception) {
             false

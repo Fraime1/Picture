@@ -10,7 +10,7 @@ enum class AppState (val state: String) {
     TYPING("typing...");
 
     companion object {
-        suspend fun updateState(appState: AppState)  = withContext(Dispatchers.IO){
+        suspend fun updateState(appState: AppState)  = withContext(Dispatchers.Main){
             async {
                 FirebaseRDPicture().updateState(appState = appState, user = FirebaseAuthPicture().getCurrentUser())
             }

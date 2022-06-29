@@ -39,8 +39,8 @@ class ProfileRepositoryImpl(
         return firebaseStoragePicture.deleteImageProfile(user = firebaseAuthPicture.getCurrentUser())
     }
 
-    override suspend fun changeUsername(text: String): Boolean {
-        return firebaseAuthPicture.changeUsername(text)
+    override suspend fun changeUsername(newUsername: String, oldUsername: String): Boolean {
+        return firebaseAuthPicture.changeUsername(newUsername, oldUsername)
     }
 
     override suspend fun changeEmail(email: String): Boolean {
